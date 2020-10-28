@@ -1,0 +1,11 @@
+<h1>{{.Title}}</h1>
+{{ range $index, $node := .GetData "nodes"}}
+	<article>
+		<a href="/node/{{$node.Slug}}">
+			<h2>{{$node.Title}}</h2>
+		</a>
+		<p>
+        {{$node.Body}}
+		</p>
+	</article>
+{{end}}
